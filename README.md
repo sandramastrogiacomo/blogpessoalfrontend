@@ -1,54 +1,71 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Blog Pessoal Frontend
 
-Currently, two official plugins are available:
+Este é o frontend de um Blog Pessoal desenvolvido com **React** e integração com uma **API REST**. O projeto faz parte de um exercício prático do **Bootcamp Generation Brasil** focado em **desenvolvimento web**, especialmente na criação de aplicações interativas e dinâmicas.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tecnologias Utilizadas
 
-## Expanding the ESLint configuration
+- **React**: Biblioteca para construção da interface de usuário.
+- **TypeScript**: Superset do JavaScript que adiciona tipagem estática.
+- **Vite**: Ferramenta de construção rápida para desenvolvimento em React.
+- **CSS**: Para a estilização do layout.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Como Rodar o Projeto
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+1. Clone este repositório:
+   ```bash
+   git clone https://github.com/sandramastrogiacomo/blogpessoalfrontend.git
+   ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. Instale as dependências:
+   ```bash
+   cd blogpessoalfrontend
+   yarn install
+   ```
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+3. Execute o projeto:
+   ```bash
+   yarn dev
+   ```
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+O projeto estará disponível em `http://localhost:3000` após ser iniciado.
+
+## Funcionalidades
+
+- **Interface interativa** com layout responsivo.
+- **Integração com uma API REST** para exibição de postagens e interação com o conteúdo do blog.
+- **Criação e edição de posts**.
+- **Sistema de autenticação** para gerenciamento de sessões do usuário.
+
+## Estrutura do Projeto
+
+- `src/`: Contém todos os arquivos de código fonte do frontend.
+  - `components/`: Componentes reutilizáveis da interface.
+  - `pages/`: Páginas principais do blog, como página inicial e de criação de posts.
+  - `services/`: Funções para comunicação com a API.
+- `public/`: Arquivos estáticos, como imagens e ícones.
+
+## Contribuindo
+
+1. Faça o **fork** deste repositório.
+2. Crie uma **branch** para a sua feature:
+   ```bash
+   git checkout -b minha-feature
+   ```
+3. Faça commit das suas alterações:
+   ```bash
+   git commit -m 'Adiciona nova feature'
+   ```
+4. Faça o **push** para a sua branch:
+   ```bash
+   git push origin minha-feature
+   ```
+5. Crie um **pull request**.
+
+## Licença
+
+Este projeto está licenciado sob a licença MIT - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+## Autora
+
+Desenvolvido com 💖 por [Sandra Mastrogiacomo](https://www.linkedin.com/in/sandramastrogiacomo/)
